@@ -75,6 +75,12 @@ span {
     cursor: pointer;
 }
 
+#dark-mode-toggle {
+    font-size: 3.0rem;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
 .navbar a {
     font-size: 1.8rem;
     color: var(--text-color);
