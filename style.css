@@ -10,10 +10,11 @@
 }
 
 :root {
-    --bg-color: #0e2954;
-    --second-bg-color: #2a629a;
-    --text-color: #d8d9da;
+    --bg-color: rgb(207, 109, 197);
+    --second-bg-color: rgb(231, 165, 223);
+    --text-color: #222528;
     --main-color: #faffaf;
+    
 }
 
 html {
@@ -51,7 +52,7 @@ span {
 
 .logo {
     font-size: 3rem;
-    color: var(--text-color);
+    color: white;
     font-weight: 800;
     cursor: pointer;
     transition: 0.3s;
@@ -59,6 +60,8 @@ span {
 
 .logo:hover {
     transform: scale(1.1);
+    color: var(--main-color);
+    text-shadow: 0 0 25px var(--main-color)
 }
 
 .logo span {
@@ -66,7 +69,7 @@ span {
 }
 
 #menu-icon {
-    font-size: 3.6rem;
+    font-size: 3.0rem;
     color: var(--text-color);
     display: none;
     cursor: pointer;
@@ -481,7 +484,7 @@ span {
 .portfolio-item {
     min-height: 550px;
     max-width: 450px;
-    background-color: rgba(0,0,0,0.7);
+    background-color: var(--second-bg-color);
     border-radius: 3rem;
     border: 3px solid rgba(238,238,238,0.2);
     margin: 0 2rem;
@@ -737,4 +740,42 @@ span {
     .services-container {
         grid-template-columns: repeat(1, 1fr);
     }
+}
+
+
+/* Dark Mode */
+
+.dark-mode-toggle {
+    --bg-color: #222528;
+    --second-bg-color: #33363a;
+    --text-color: #faffaf;
+    --main-color: #faffaf;
+}
+
+#dark-mode-toogle {
+    color: var(--text-color);
+    cursor: pointer;
+    height: 500px;
+    width: 500px;
+}
+
+body.dark-mode-toggle {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+body.dark-mode-toggle .navbar a {
+    color: var(--text-color);
+}
+
+body.dark-mode-toggle .header {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+body.dark-mode-toggle .logo {
+    color: var(--main-color);
+}
+
+body.dark-mode-toggle .timeline-content {
+    background-color: var(--second-bg-color);
 }

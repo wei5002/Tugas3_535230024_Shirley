@@ -23,3 +23,13 @@ window.onscroll = () => {
         }
     });
 };
+
+
+const darkModeToggle = document.getElementById('dark-mode-toggle');
+const body = document.body;
+
+darkModeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode-toggle');
+    darkModeToggle.classList.toggle('fa-sun');
+    darkModeToggle.classList.toggle('fa-moon');
+});
